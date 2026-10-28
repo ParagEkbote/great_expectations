@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import threading
+import warnings
 from typing import TYPE_CHECKING, Any, ClassVar, List, Literal, Optional, Sequence, Type
 
 import pandas as pd
@@ -306,6 +307,14 @@ class PandasHuggingFaceDatasource(_PandasDatasource):
         whole_config: bool,
         revision: Optional[str],
     ) -> Any:
+        if self.token is None:
+            warnings.warn(
+                "No Hugging Face token is configured for this datasource. The Hugging Face "
+                "Datasets client may use credentials saved with `hf auth login`; run that "
+                "command to authentication and improved rate limits.",
+                UserWarning,
+                stacklevel=2,
+            )
         kwargs: dict[str, Any] = {
             "split": None if whole_config else split,
             "revision": revision,
