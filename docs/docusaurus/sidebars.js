@@ -68,6 +68,11 @@ module.exports = {
           type: 'doc',
           id: 'core/connect_to_data/dataframes/dataframes',
           label: 'Connect to data in Dataframes'
+        },
+        {
+          type: 'doc',
+          id: 'core/connect_to_data/hugging_face_data/hugging_face_data',
+          label: 'Connect to Hugging Face Datasets'
         }
       ]
     },

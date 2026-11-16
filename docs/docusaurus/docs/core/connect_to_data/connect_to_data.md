@@ -16,8 +16,8 @@ import OverviewCard from '@site/src/components/OverviewCard';
 
 <LinkCardGrid>
   
-  <LinkCard 
-      topIcon 
+  <LinkCard
+      topIcon
       label="SQL Data"
       description="Connect to data in SQL databases and organize it into Batches for validation."
       to="/core/connect_to_data/sql_data" 
@@ -36,5 +36,12 @@ import OverviewCard from '@site/src/components/OverviewCard';
       description="Connect to data in pandas or Spark Dataframes and organize it into Batches for validation."
       to="/core/connect_to_data/dataframes" 
       icon="/img/expectation_icon.svg" 
+  />
+  <LinkCard
+      topIcon
+      label="Hugging Face Datasets"
+      description="Connect to datasets on the Hugging Face Hub and organize configurations and splits into Batches for validation."
+      to="/core/connect_to_data/hugging_face_data"
+      icon="/img/expectation_icon.svg"
   />
 </LinkCardGrid>
